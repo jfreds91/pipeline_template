@@ -36,8 +36,8 @@ def load_and_filter(PREDICTION_COLUMN:str,
     This function loads a dataset (from parquet, for now), and runs preprocessing/filtering on it,
         not including pipeline transforms. This should be custom for each dataset.
     INPUTS:
-        parquet_path (str): Path to parquet file which has contains parsed pdel dataframe 
-        sfc_plt_count_path (str): Path to csv file which has contains mapping of SFC: count(*) WHERE PLT
+	PREDICTION_COLUMN (str): name of target prediction column in the training data
+        PARQUET_PATH (str): Path to parquet file which has contains dataframe 
         load_and_filter_dict (dict): dict which contains any custom info needed by this function.
                                      Used to pass multiple objects through preprocess_data()
     RETURNS:
